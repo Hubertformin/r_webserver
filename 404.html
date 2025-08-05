@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+    .rust-logo {
+      width: 120px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .code-snippet {
+      background: #2d2d2d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      color: #f8f8f2;
+      font-family: 'Fira Code', monospace;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center">
+<div class="max-w-2xl mx-auto p-6 text-white text-center">
+  <img src="https://www.rust-lang.org/static/images/rust-logo-blk.svg" alt="Rust Logo" class="rust-logo mx-auto mb-6">
+  <h1 class="text-5xl font-bold mb-4">404 - Page Not Found</h1>
+  <p class="text-xl text-gray-300 mb-6">Oops! Looks like this page got lost in the borrow checker.</p>
+
+  <div class="code-snippet mb-8">
+    <code>
+      // Error: Resource not found
+      fn find_page(path: &str) -> Result&lt;Page, Error&gt; {
+      Err(Error::NotFound(path.to_string()))
+      }
+    </code>
+  </div>
+
+  <p class="text-gray-300 mb-6">Let's get you back to safety.</p>
+  <a href="/index.html" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+    Return to Homepage
+  </a>
+</div>
+</body>
+</html>
